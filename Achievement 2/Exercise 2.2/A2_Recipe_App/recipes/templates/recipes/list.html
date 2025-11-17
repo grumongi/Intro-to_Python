@@ -69,6 +69,11 @@
             border: 2px solid #667eea;
         }
         
+        .btn-logout {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+        }
+        
         .nav-links a:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -228,6 +233,7 @@
             <p>Discover delicious recipes from our collection</p>
             <div class="nav-links">
                 <a href="{% url 'recipes:home' %}" class="btn-home">← Home</a>
+                <a href="{% url 'recipes:logout' %}" class="btn-logout">Logout</a>
                 <a href="/admin/" class="btn-admin">Admin Panel</a>
             </div>
         </div>
