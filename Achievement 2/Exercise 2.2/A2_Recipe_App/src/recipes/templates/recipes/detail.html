@@ -47,6 +47,26 @@
             transform: translateY(-2px);
         }
         
+        .nav-links a.logout-btn {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+        }
+        
+        .nav-links a.logout-btn:hover {
+            background: linear-gradient(45deg, #c0392b, #a93226);
+            transform: translateY(-2px);
+        }
+        
+        .nav-links a.logout-btn {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+        }
+        
+        .nav-links a.logout-btn:hover {
+            background: linear-gradient(45deg, #c0392b, #a93226);
+            transform: translateY(-2px);
+        }
+        
         .recipe-detail {
             background: white;
             border-radius: 20px;
@@ -252,6 +272,7 @@
             <div class="nav-links">
                 <a href="{% url 'recipes:home' %}">← Home</a>
                 <a href="{% url 'recipes:list' %}">All Recipes</a>
+                <a href="{% url 'recipes:logout' %}" class="logout-btn">Logout</a>
                 <a href="/admin/">Admin Panel</a>
             </div>
         </div>
