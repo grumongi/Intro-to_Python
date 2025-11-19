@@ -281,7 +281,7 @@
             </div>
         </div>
 
-        {% if total_recipes &gt; 0 %}
+        {% if total_recipes %}
         <!-- Statistics Overview -->
         <div class="statistics-section">
             <h2 class="statistics-title">Recipe Collection Overview</h2>
@@ -344,9 +344,9 @@
             <div class="insight-item">
                 <h4>🎯 Most Common Difficulty</h4>
                 <p>
-                    {% if easy_count &gt;= medium_count and easy_count &gt;= hard_count %}
+                    {% if easy_count >= medium_count and easy_count >= hard_count %}
                         Most of your recipes ({{ easy_count }} out of {{ total_recipes }}) are marked as Easy difficulty. Great for quick cooking!
-                    {% elif medium_count &gt;= hard_count %}
+                    {% elif medium_count >= hard_count %}
                         Most of your recipes ({{ medium_count }} out of {{ total_recipes }}) are Medium difficulty. A nice balance of challenge and accessibility.
                     {% else %}
                         Most of your recipes ({{ hard_count }} out of {{ total_recipes }}) are Hard difficulty. You enjoy culinary challenges!
@@ -357,9 +357,9 @@
             <div class="insight-item">
                 <h4>⏱️ Cooking Time Profile</h4>
                 <p>
-                    {% if avg_cooking_time &lt;= 30 %}
+                    {% if avg_cooking_time <= 30 %}
                         Your recipes average {{ avg_cooking_time|floatformat:0 }} minutes - perfect for quick meals and busy schedules!
-                    {% elif avg_cooking_time &lt;= 60 %}
+                    {% elif avg_cooking_time <= 60 %}
                         Your recipes average {{ avg_cooking_time|floatformat:0 }} minutes - a good mix of quick and substantial cooking times.
                     {% else %}
                         Your recipes average {{ avg_cooking_time|floatformat:0 }} minutes - you enjoy elaborate cooking sessions and complex dishes!
@@ -371,7 +371,7 @@
                 <h4>📊 Collection Growth</h4>
                 <p>
                     Your recipe collection has grown to {{ total_recipes }} recipes. 
-                    {% if quick_count &gt; 0 %}
+                    {% if quick_count > 0 %}
                         You have {{ quick_count }} quick recipes (under 30 minutes) for those busy days.
                     {% endif %}
                     Keep expanding your culinary repertoire!
